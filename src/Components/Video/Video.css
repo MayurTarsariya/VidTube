@@ -1,0 +1,18 @@
+.play-container {
+    background: var(--container-bg-color);
+    padding: 20px 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.playdark {
+    background: var(--dark-bg-color);
+}
+
+@media (width<=1080px) {
+    .play-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

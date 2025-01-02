@@ -1,0 +1,125 @@
+.search {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    row-gap: 30px;
+    margin-top: 15px;
+
+    & .card {
+        display: flex;
+        gap: 15px;
+
+        & img {
+            width: 500px;
+            height: 280px;
+            border-radius: 6px;
+
+            &:hover {
+                transform: scale(1.02);
+                border-radius: 0px;
+            }
+        }
+
+        & .details {
+            & h2 {
+                font-size: 18px;
+                line-height: 25px;
+                color: var(--black-color);
+                font-weight: 500;
+                margin: 5px 0;
+            }
+
+            & p {
+                font-size: 12px;
+            }
+
+            & h3 {
+                font-size: 13px;
+                color: var(--link-color);
+                font-weight: 400;
+                margin: 5px 0;
+            }
+
+        }
+    }
+}
+
+
+@media (width<=1280px) {
+    .search {
+        & .card {
+            gap: 10px;
+
+            & img {
+                width: 450px;
+                height: 270px;
+            }
+        }
+    }
+}
+
+@media (width<=982px) {
+    .search {
+        & .card {
+
+
+            & img {
+                width: 400px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media (width<=800px) {
+    .search {
+        & .card {
+
+
+            & img {
+                width: 350px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (width<=768px) {
+    .search {
+        & .card {
+            flex-direction: column;
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+
+            & .details {
+                & h2 {
+                    font-size: 17px;
+                    line-height: 25px;
+                    color: var(--black-color);
+                    font-weight: 500;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+.darksearch {
+    & .card {
+        & .details {
+            & h2 {
+                color: var(--white-color);
+            }
+
+            & h3 {
+                color: var(--dark-input-placehlder);
+            }
+
+            & p {
+                color: var(--dark-input-placehlder);
+            }
+        }
+    }
+}
