@@ -11,7 +11,7 @@ export const SearchVideo = ({ isDark }) => {
     const navigate = useNavigate();
     const fetchSearchData = async () => {
         if (searchQuery.trim()) {
-            const searchUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&q=${encodeURIComponent(searchQuery)}&type=video&key=${API_KEY}`;
+            const searchUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&q=${encodeURIComponent(searchQuery)}&type=video&videoCategoryId=22&key=${API_KEY}`;
             try {
                 const response = await fetch(searchUrl);
                 const data = await response.json();
